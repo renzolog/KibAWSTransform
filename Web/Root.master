@@ -1,0 +1,128 @@
+<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Root.master.vb" Inherits="Web.Root" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server" EnableViewState="false">
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href='<%# ResolveUrl("~/Content/Content.css") %>' />
+    <link rel="stylesheet" type="text/css" href='<%# ResolveUrl("~/Content/Layout.css") %>' /> 
+    <asp:ContentPlaceHolder ID="Head" runat="server"></asp:ContentPlaceHolder>
+    <script type="text/javascript" src='<%# ResolveUrl("~/Content/Script.js") %>'></script>
+    <script type="text/javascript" src='<%# ResolveUrl("~/Content/js/Controls/GridView.js") %>'></script> 
+</head>
+<body>
+    <form id="form1" runat="server" class="form">
+        <dx:ASPxPanel runat="server" ID="HeaderPanel" ClientInstanceName="headerPanel" FixedPosition="WindowTop"
+            FixedPositionOverlap="true" CssClass="app-header">
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                    <div class="left-block">
+                        <dx:ASPxMenu runat="server" ID="LeftAreaMenu" ClientInstanceName="leftAreaMenu"
+                            ItemAutoWidth="false" ItemWrap="false" SeparatorWidth="0" EnableHotTrack="false"
+                            Width="100%" CssClass="header-menu" SyncSelectionMode="None">
+                            <ItemStyle VerticalAlign="Middle" CssClass="item" />
+                            <Items>
+                                <dx:MenuItem Text="" Name="ToggleLeftPanel" GroupName="LeftPanel">
+                                    <ItemStyle CssClass="toggle-item vertically-aligned" CheckedStyle-CssClass="checked selected" />
+                                   <%-- <Image Url="~/Content/Images/menu.svg" Height="18px" Width="18px" />--%>
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="" Name="Back">
+                                    <ItemStyle CssClass="toggle-item vertically-aligned" />
+                                    <Image Url="~/Content/Images/back.svg" Height="18px" Width="18px" />
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="" ItemStyle-CssClass="image-item vertically-aligned" NavigateUrl="~/">
+                                    <Image SpriteProperties-CssClass="header-logo" />
+                                </dx:MenuItem>
+                            </Items>
+                            <%--<ClientSideEvents ItemClick="onLeftMenuItemClick" />--%>
+                        </dx:ASPxMenu>
+                    </div>
+                    
+                    <div class="right-block">
+                        <dx:ASPxMenu runat="server" ID="RightAreaMenu" ClientInstanceName="rightAreaMenu"
+                            ItemAutoWidth="false" ItemWrap="false" ShowPopOutImages="False"
+                            SeparatorWidth="0" ApplyItemStyleToTemplates="true"
+                            Width="100%" CssClass="header-menu" OnItemClick="RightAreaMenu_ItemClick">
+                            <ItemStyle VerticalAlign="Middle" CssClass="item" />
+                            <SubMenuItemStyle CssClass="item" />
+                            <SubMenuStyle CssClass="header-sub-menu" />
+                            <Items>
+                                <dx:MenuItem Name="AccountItem" ItemStyle-CssClass="image-item">
+                                    <TextTemplate>
+                                        <div class="account-background">
+                                            <div runat="server" id="AccountImage" class="empty-image" />
+                                        </div>
+                                    </TextTemplate>
+                                    <Items>
+                                        <dx:MenuItem Name="SignInItem" Text="Login" NavigateUrl="~/Account/SignIn.aspx"></dx:MenuItem> 
+                                        <dx:MenuItem Name="MyAccountItem" Text="My account" ItemStyle-CssClass="myaccount-item">
+                                            <TextTemplate>
+                                                <div class="user-info">
+                                                    <div class="avatar">
+                                                        <img runat="server" id="AvatarUrl" src="Content/Images/user.svg" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <dx:ASPxLabel ID="UserNameLabel" runat="server" CssClass="user-name"></dx:ASPxLabel>
+                                                        <dx:ASPxLabel ID="EmailLabel" runat="server" CssClass="email"></dx:ASPxLabel>
+                                                    </div>
+                                                </div>
+                                            </TextTemplate>
+                                        </dx:MenuItem>
+                                        <dx:MenuItem Name="SignOutItem" Text="Logout" Image-Url="Content/Images/sign-out.svg" Image-Height="16px"></dx:MenuItem>
+                                    </Items>
+                                </dx:MenuItem>
+<%--                                <dx:MenuItem Text="" Name="ToggleRightPanel" GroupName="RightPanel">
+                                    <ItemStyle CssClass="toggle-item vertically-aligned" CheckedStyle-CssClass="checked selected" />
+                                    <Image Height="18px" SpriteProperties-CssClass="image" />
+                                </dx:MenuItem>--%>
+                            </Items>
+                            <ClientSideEvents ItemClick="onRightMenuItemClick" />
+                        </dx:ASPxMenu>
+                    </div>
+
+                    <div class="menu-container">
+                        <div>
+                            <dx:ASPxMenu runat="server" ID="ApplicationMenu" ClientInstanceName="applicationMenu" 
+                                ItemAutoWidth="false" EnableSubMenuScrolling="true"
+                                ShowPopOutImages="True" SeparatorWidth="0" ItemWrap="false"
+                                CssClass="header-menu application-menu" Width="100%" HorizontalAlign="Right" OnItemDataBound="ApplicationMenu_ItemDataBound">
+                                <SettingsAdaptivity Enabled="true" EnableAutoHideRootItems="true" />
+                                <ItemStyle VerticalAlign="Middle" CssClass="item" SelectedStyle-CssClass="selected" HoverStyle-CssClass="hovered" />
+                                <ItemImage Width="22" Height="22" />
+                                <SubMenuStyle CssClass="header-sub-menu" />
+                                <AdaptiveMenuImage SpriteProperties-CssClass="adaptive-image" />
+                                <Items>
+                                    <dx:MenuItem Name="miEnti" Text="Enti" NavigateUrl="Tabelle/Enti.aspx" Enabled="false"></dx:MenuItem>
+                                    <dx:MenuItem Name="miEntiUtenti" Text="Utenti" NavigateUrl="Tabelle/EntiUtenti.aspx" Enabled="false"></dx:MenuItem>
+                                    <dx:MenuItem Name="miUnitaDocumentarie" Text="Unità Documentarie" NavigateUrl="Tabelle/UnitaDocumentarie.aspx" Enabled="false"></dx:MenuItem>
+                                    <dx:MenuItem Name="miRegistro" Text="Registro" NavigateUrl="Tabelle/Registro.aspx" Enabled="false"></dx:MenuItem>
+                                    <dx:MenuItem Name="miLogEvent" Text="Log Event" NavigateUrl="Tabelle/LogEvent.aspx" Enabled="false"></dx:MenuItem>
+                                    <dx:MenuItem Name="miLogEventSystem" Text="Log Event System" NavigateUrl="Tabelle/LogEventSystem.aspx" Enabled="false"></dx:MenuItem>
+                                </Items>
+                            </dx:ASPxMenu>
+                        </div>
+                    </div>
+                    <div class="dx-clear"></div>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+         
+        <div class="content" id="pageContent">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
+            <%--<div class="footer-wrapper" id="footerWrapper">
+                <div class="footer">
+                     
+                </div>
+            </div>--%>
+        </div>
+
+        <dx:ASPxSiteMapDataSource runat="server" ID="ApplicationMenuDataSource" SiteMapFileName="~/App_Data/ApplicationMenuDataSource.sitemap" />
+        <dx:ASPxGlobalEvents runat="server">
+            <ClientSideEvents ControlsInitialized="onControlsInitialized" BrowserWindowResized="onBrowserWindowResized" />
+        </dx:ASPxGlobalEvents>
+    </form>
+</body>
+</html>

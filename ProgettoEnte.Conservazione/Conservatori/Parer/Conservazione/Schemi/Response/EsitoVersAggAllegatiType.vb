@@ -1,0 +1,162 @@
+Option Strict Off
+
+Option Explicit On
+
+Imports System.Xml.Serialization
+
+Namespace Conservatori.PARER.Conservazione.Schemi.Response
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440"), _
+     System.SerializableAttribute(), _
+     System.Diagnostics.DebuggerStepThroughAttribute(), _
+     System.ComponentModel.DesignerCategoryAttribute("code"), _
+     System.Xml.Serialization.XmlRootAttribute("EsitoVersAggAllegati", [Namespace]:="", IsNullable:=False)> _
+    Partial Public Class EsitoVersAggAllegatiType
+
+        Private versioneField As String
+
+        Private versioneXMLChiamataField As String
+
+        Private dataVersamentoField As Date
+
+        Private esitoGeneraleField As ECEsitoGeneraleType
+
+        Private erroriUlterioriField() As ECErroreType
+
+        Private warningUlterioriField() As ECWarningType
+
+        Private esitoChiamataWSField As ECEsitoChiamataWSType
+
+        Private esitoXSDField As ECEsitoXSDAggAllType
+
+        Private configurazioneField As ECConfigurazioneType
+
+        Private unitaDocumentariaField As ECUnitaDocAggAllType
+
+        Private rapportoVersamentoField As String
+
+        Private xMLVersamentoField As String
+
+        '''<remarks/>
+        Public Property Versione() As String
+            Get
+                Return Me.versioneField
+            End Get
+            Set(value As String)
+                Me.versioneField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property VersioneXMLChiamata() As String
+            Get
+                Return Me.versioneXMLChiamataField
+            End Get
+            Set(value As String)
+                Me.versioneXMLChiamataField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property DataVersamento() As Date
+            Get
+                Return Me.dataVersamentoField
+            End Get
+            Set(value As Date)
+                Me.dataVersamentoField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property EsitoGenerale() As ECEsitoGeneraleType
+            Get
+                Return Me.esitoGeneraleField
+            End Get
+            Set(value As ECEsitoGeneraleType)
+                Me.esitoGeneraleField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        <System.Xml.Serialization.XmlArrayItemAttribute("Errore", IsNullable:=False)> _
+        Public Property ErroriUlteriori() As ECErroreType()
+            Get
+                Return Me.erroriUlterioriField
+            End Get
+            Set(value As ECErroreType())
+                Me.erroriUlterioriField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        <System.Xml.Serialization.XmlArrayItemAttribute("Warning", IsNullable:=False)> _
+        Public Property WarningUlteriori() As ECWarningType()
+            Get
+                Return Me.warningUlterioriField
+            End Get
+            Set(value As ECWarningType())
+                Me.warningUlterioriField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property EsitoChiamataWS() As ECEsitoChiamataWSType
+            Get
+                Return Me.esitoChiamataWSField
+            End Get
+            Set(value As ECEsitoChiamataWSType)
+                Me.esitoChiamataWSField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property EsitoXSD() As ECEsitoXSDAggAllType
+            Get
+                Return Me.esitoXSDField
+            End Get
+            Set(value As ECEsitoXSDAggAllType)
+                Me.esitoXSDField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property Configurazione() As ECConfigurazioneType
+            Get
+                Return Me.configurazioneField
+            End Get
+            Set(value As ECConfigurazioneType)
+                Me.configurazioneField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property UnitaDocumentaria() As ECUnitaDocAggAllType
+            Get
+                Return Me.unitaDocumentariaField
+            End Get
+            Set(value As ECUnitaDocAggAllType)
+                Me.unitaDocumentariaField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property RapportoVersamento() As String
+            Get
+                Return Me.rapportoVersamentoField
+            End Get
+            Set(value As String)
+                Me.rapportoVersamentoField = Value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property XMLVersamento() As String
+            Get
+                Return Me.xMLVersamentoField
+            End Get
+            Set(value As String)
+                Me.xMLVersamentoField = Value
+            End Set
+        End Property
+    End Class
+End Namespace

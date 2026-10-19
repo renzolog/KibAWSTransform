@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProgettoEnte.Conservazione", "ProgettoEnte.Conservazione.vbproj", "{0D122226-4C92-4661-8B99-AA3EE6F693E7}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ProgettoEnte.Conservazione.Web.ServiceLayer", "http://localhost:54220", "{FFB3CD88-DC16-4BE4-9953-D81276FDB5F4}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		ProjectReferences = "{0d122226-4c92-4661-8b99-aa3ee6f693e7}|ProgettoEnte.Conservazione.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54220"
+		Debug.AspNetCompiler.PhysicalPath = "..\ProgettoEnte.Conservazione.Web.ServiceLayer\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54220\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54220"
+		Release.AspNetCompiler.PhysicalPath = "..\ProgettoEnte.Conservazione.Web.ServiceLayer\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54220\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\ProgettoEnte.Conservazione.Web.ServiceLayer\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProgettoEnte.Conservazione.Database", "..\ProgettoEnte.Conservazione.Database\ProgettoEnte.Conservazione.Database.sqlproj", "{33D7965B-62B4-40FC-87FF-1BD524CDD476}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Web", "..\Web\Web.vbproj", "{6896F37A-1023-4EB5-B0AE-D607358099B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D122226-4C92-4661-8B99-AA3EE6F693E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D122226-4C92-4661-8B99-AA3EE6F693E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D122226-4C92-4661-8B99-AA3EE6F693E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D122226-4C92-4661-8B99-AA3EE6F693E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB3CD88-DC16-4BE4-9953-D81276FDB5F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB3CD88-DC16-4BE4-9953-D81276FDB5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB3CD88-DC16-4BE4-9953-D81276FDB5F4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB3CD88-DC16-4BE4-9953-D81276FDB5F4}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{33D7965B-62B4-40FC-87FF-1BD524CDD476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D7965B-62B4-40FC-87FF-1BD524CDD476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D7965B-62B4-40FC-87FF-1BD524CDD476}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{33D7965B-62B4-40FC-87FF-1BD524CDD476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D7965B-62B4-40FC-87FF-1BD524CDD476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D7965B-62B4-40FC-87FF-1BD524CDD476}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6896F37A-1023-4EB5-B0AE-D607358099B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6896F37A-1023-4EB5-B0AE-D607358099B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6896F37A-1023-4EB5-B0AE-D607358099B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6896F37A-1023-4EB5-B0AE-D607358099B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F4862AC-C7BD-4062-8704-40045A15A298}
+	EndGlobalSection
+EndGlobal

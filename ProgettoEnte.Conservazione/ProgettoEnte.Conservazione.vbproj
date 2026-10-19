@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D122226-4C92-4661-8B99-AA3EE6F693E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ProgettoEnte.Conservazione</RootNamespace>
+    <AssemblyName>ProgettoEnte.Conservazione</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ProgettoEnte.Conservazione.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ProgettoEnte.Conservazione.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Kibernetes.Certificate">
+      <HintPath>My Project\Kibernetes.Certificate.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthProviders\User.vb" />
+    <Compile Include="Conservatori\DAX\Autenticazione\DAXLoginInfo.vb" />
+    <Compile Include="Conservatori\DAX\Autenticazione\DAXLoginSession.vb" />
+    <Compile Include="Conservatori\DAX\Autenticazione\Gestione.vb" />
+    <Compile Include="Conservatori\DAX\Conservazione\Document.vb" />
+    <Compile Include="Conservatori\DAX\Conservazione\Schemi\CoreReceiveSipService.vb" />
+    <Compile Include="Conservatori\DAX\Conservazione\Schemi\SIPManifest.vb" />
+    <Compile Include="Conservatori\DAX\Esibizione\Document.vb" />
+    <Compile Include="Conservatori\DAX\Esibizione\EsibizioneArgs.vb" />
+    <Compile Include="Conservatori\DAX\Esibizione\Request.vb" />
+    <Compile Include="Conservatori\DAX\Esibizione\Schemi\RequestEsibizione.vb" />
+    <Compile Include="Conservatori\DAX\Esibizione\Schemi\ResponseEsibizione.vb" />
+    <Compile Include="Conservatori\DAX\Esibizione\Schemi\WSCoreDIPSincroService.vb" />
+    <Compile Include="Conservatori\DAX\Shared\SharedInfo.vb" />
+    <Compile Include="Conservatori\Infocert\Autenticazione\InfocertLoginInfo.vb" />
+    <Compile Include="Conservatori\Infocert\Autenticazione\Gestione.vb" />
+    <Compile Include="Conservatori\Infocert\Autenticazione\InforcertLoginSession.vb" />
+    <Compile Include="Conservatori\Infocert\Conservazione\Document.vb" />
+    <Compile Include="Conservatori\Infocert\Conservazione\IdC_2021.vb" />
+    <Compile Include="Conservatori\Infocert\Conservazione\IndexFile.vb" />
+    <Compile Include="Conservatori\Infocert\Conservazione\ParametersFile.vb" />
+    <Compile Include="Conservatori\Infocert\Eliminazione\Document.vb" />
+    <Compile Include="Conservatori\Infocert\Esibizione\Document.vb" />
+    <Compile Include="Conservatori\Infocert\Esibizione\EsibizioneArgs.vb" />
+    <Compile Include="Conservatori\Infocert\Rettifica\Document.vb" />
+    <Compile Include="Conservatori\Parer\Autenticazione\Gestione.vb" />
+    <Compile Include="Conservatori\Parer\Autenticazione\PARERLoginInfo.vb" />
+    <Compile Include="Conservatori\Parer\Autenticazione\PARERLoginSession.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\CamiciaFascicoloType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\ChiaveType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\ComponenteType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\ConfigAggAllType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\ConfigType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\DatiFiscaliType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\DatiSpecificiType.vb" />
+    <Compile Include="Conservatori\Parer\Shared\Helper.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\DatiSpecifici\xsd_prot.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\DocumentoCollegatoTypeDocumentoCollegato.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\DocumentoType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\FascicoloType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\IntestazioneAggAllType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\IntestazioneType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Document.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\ItemChoiceType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\ProfiloArchivisticoType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\ProfiloDocumentoType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\ProfiloUnitaDocumentariaType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ComponenteSIPType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\DocumentoSIPType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECComponenteType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECComponenteTypeEsitoComponente.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECConfigurazioneType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECConfigurazioneTypeTipoConservazione.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECDocumentoType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECDocumentoTypeEsitoDocumento.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECErroreType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoChiamataWSType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoControlloType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoExtType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoGeneraleType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoIdonFormatoType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoPosNegType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoPosNegWarType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoRicFormatoType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoXSDAggAllType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECEsitoXSDType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECFirmatarioType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECFirmatarioTypeEsitoFirma.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECFirmatarioTypeEsitoFirmaVerificaFirma.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECMarcaType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECMarcaTypeEsitoMarca.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECMarcaTypeEsitoMarcaVerificaMarca.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECSottoComponenteType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECSottoComponenteTypeEsitoSottoComponente.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECStatoConsType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECUnitaDocAggAllType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECUnitaDocAggAllTypeEsitoUnitaDocumentaria.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECUnitaDocType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECUnitaDocTypeEsitoUnitaDocumentaria.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ECWarningType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\EsitoVersAggAllegatiType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\ItemChoiceType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\RapportoVersamentoType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\SCChiaveType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\SCVersatoreType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\SIPType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\UnitaDocumentariaSIPType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\Response\EsitoVersamentoType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\SottoComponenteType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\StrutturaType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\TipoConservazioneType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\TipoSupportoType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\UnitaDocAggAllegati.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\VersatoreType.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\Schemi\UnitaDocumentaria.vb" />
+    <Compile Include="Conservatori\Parer\Conservazione\SIP.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Document.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\EsibizioneArgs.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Request.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\ChiaveType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\CamiciaFascicoloType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\ChiaveType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\ComponenteType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\DatiFiscaliType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\DatiRifVolumeType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\DatiSpecificiType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\DatiUnitaDocType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\DatiVolumeType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\DocumentoCollegatoTypeDocumentoCollegato.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\DocumentoContenutoType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\DocumentoType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\DocumentoTypeStatoConservazione.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\ECEsitoExtType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\ECEsitoPosNegType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\EsitoChiamataWSType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\EsitoGenericoType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\FascicoloType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\IndiceProveConservazione.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\PCVolumeType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\ProfiloArchivisticoType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\ProfiloDocumentoType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\ProfiloUnitaDocumentariaType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\SCVersatoreType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\SottoComponenteType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\StatoConservazione.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\StrutturaType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\TipoConservazioneType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\TipoSupportoType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Response\UnitaDocumentaria.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\VersatoreType.vb" />
+    <Compile Include="Conservatori\Parer\Esibizione\Schemi\Recupero.vb" />
+    <Compile Include="Conservatori\Parer\Shared\SharedInfo.vb" />
+    <Compile Include="Conservatori\PARVeneto\Autenticazione\Gestione.vb" />
+    <Compile Include="Conservatori\PARVeneto\Autenticazione\WebService\Autenticazione.vb" />
+    <Compile Include="Conservatori\PARVeneto\Autenticazione\PARVenetoLoginInfo.vb" />
+    <Compile Include="Conservatori\PARVeneto\Autenticazione\PARVenetoLoginSession.vb" />
+    <Compile Include="Conservatori\PARVeneto\Autenticazione\WebService\Response.vb" />
+    <Compile Include="Conservatori\PARVeneto\Autenticazione\WebService\UserLogin.vb" />
+    <Compile Include="Conservatori\PARVeneto\Conservazione\Document.vb" />
+    <Compile Include="Conservatori\PARVeneto\Conservazione\Risposta.vb" />
+    <Compile Include="Conservatori\PARVeneto\Conservazione\Schemi\metadati.vb" />
+    <Compile Include="Conservatori\PARVeneto\Esibizione\Document.vb" />
+    <Compile Include="Conservatori\PARVeneto\Esibizione\EsibizioneArgs.vb" />
+    <Compile Include="Conservatori\PARVeneto\Esibizione\Schemi\Esibizione.vb" />
+    <Compile Include="Conservatori\PARVeneto\Shared\SharedInfo.vb" />
+    <Compile Include="Conservatori\Shared\AttributiAffissione.vb" />
+    <Compile Include="Conservatori\Shared\AttributiContratto.vb" />
+    <Compile Include="Conservatori\Shared\AttributiDelibera.vb" />
+    <Compile Include="Conservatori\Shared\AttributiDetermina.vb" />
+    <Compile Include="Conservatori\Shared\AttributiDocumentoGenerico.vb" />
+    <Compile Include="Conservatori\Shared\AttributiFascicoli.vb" />
+    <Compile Include="Conservatori\Shared\AttributiFascicoloElettorale.vb" />
+    <Compile Include="Conservatori\Shared\AttributiFatturaAttiva.vb" />
+    <Compile Include="Conservatori\Shared\AttributiFatturaPassiva.vb" />
+    <Compile Include="Conservatori\Shared\AttributiGenerici.vb" />
+    <Compile Include="Conservatori\Shared\AttributiGiornaleCassa.vb" />
+    <Compile Include="Conservatori\Shared\AttributiOrdinativiIncasso.vb" />
+    <Compile Include="Conservatori\Shared\AttributiOrdinativiPagamenti.vb" />
+    <Compile Include="Conservatori\Shared\AttributiOrdinativiSIOPE.vb" />
+    <Compile Include="Conservatori\Shared\DocumentoCollegato.vb" />
+    <Compile Include="Conservatori\Shared\AttributiProtocollo.vb" />
+    <Compile Include="Conservatori\Shared\AttributiRegistroProtocollo.vb" />
+    <Compile Include="Conservatori\Shared\DatiSpecifici.vb" />
+    <Compile Include="Conservatori\Shared\Fascicolo.vb" />
+    <Compile Include="Data\EnteInfoDAX.vb" />
+    <Compile Include="Data\EnteInfoINFOCERT.vb" />
+    <Compile Include="Data\EnteInfoPARER.vb" />
+    <Compile Include="Data\EnteInfoPARVeneto.vb" />
+    <Compile Include="Data\Query\QueryEntiInfoDAX.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueryEntiInfoDAX.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Query\QueryEntiInfoINFOCERT.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueryEntiInfoINFOCERT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Query\QueryEntiInfoPARVeneto.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueryEntiInfoPARVeneto.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UnitaDocumentarie.vb" />
+    <Compile Include="Data\Query\QueryEntiInfoPARER.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueryEntiInfoPARER.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Query\QueryUnitaDocumentarie.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueryUnitaDocumentarie.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Query\QueryRegistro.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueryRegistro.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Registro.vb" />
+    <Compile Include="Gestione\Login\BaseProtect.vb" />
+    <Compile Include="Data\Ente.vb" />
+    <Compile Include="Data\EnteUtente.vb" />
+    <Compile Include="Data\Enum\TipoConservatore.vb" />
+    <Compile Include="Data\Query\QueryEnti.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueryEnti.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestione\Login\LoginException.vb" />
+    <Compile Include="Gestione\Login\User.vb" />
+    <Compile Include="Shared\Conservazione\AggiuntaAllegatiInfo.vb" />
+    <Compile Include="Shared\Conservazione\Chiave.vb" />
+    <Compile Include="Shared\Conservazione\ConservationResponseAsyncInfo.vb" />
+    <Compile Include="Shared\Conservazione\Helper.vb" />
+    <Compile Include="Shared\Conservazione\RettificaInfo.vb" />
+    <Compile Include="Shared\Conservazione\TestParametriInfo.vb" />
+    <Compile Include="Shared\Conservazione\TipoAllegato.vb" />
+    <Compile Include="Shared\Conservazione\TipoFile.vb" />
+    <Compile Include="Shared\Conservazione\TipoModalitaFormazione.vb" />
+    <Compile Include="Shared\Esibizione\EsibisciArgs.vb" />
+    <Compile Include="Conservatori\Infocert\Exception\InfocertExtededSystemException.vb" />
+    <Compile Include="Conservatori\Shared\Exception\RichiestaInconsistenteException.vb" />
+    <Compile Include="Conservatori\Infocert\Shared\ErrorInfo.vb" />
+    <Compile Include="Gestione.vb" />
+    <Compile Include="Gestione\FunzioniVarie.vb" />
+    <Compile Include="Log\LogSystem.vb" />
+    <Compile Include="Shared\Conservazione\ConservationInfo.vb" />
+    <Compile Include="Shared\Conservazione\ConservationResponseInfo.vb" />
+    <Compile Include="Shared\Conservazione\File.vb" />
+    <Compile Include="Shared\Conservazione\FileBase.vb" />
+    <Compile Include="Shared\Conservazione\FileFlags.vb" />
+    <Compile Include="Shared\Conservazione\FileInfo.vb" />
+    <Compile Include="Shared\Conservazione\MimeType.vb" />
+    <Compile Include="Shared\GenericHTTP\Multi\Utility.vb" />
+    <Compile Include="Shared\GenericHTTP\Multi\DictionaryExtensions.vb" />
+    <Compile Include="Shared\GenericHTTP\Multi\FileInfoExtensions.vb" />
+    <Compile Include="Gestione\Login\Login.vb" />
+    <Compile Include="Gestione\Login\LoginManager.vb" />
+    <Compile Include="Gestione\Login\LoginSession.vb" />
+    <Compile Include="Gestione\Login\LoginInfo.vb" />
+    <Compile Include="Shared\GenericHTTP\Info.vb" />
+    <Compile Include="Shared\GenericHTTP\MetodoHTTP.vb" />
+    <Compile Include="Conservatori\Infocert\Shared\SharedInfo.vb" />
+    <Compile Include="Conservatori\Infocert\Shared\Utility.vb" />
+    <Compile Include="Shared\TipoSoftware.vb" />
+    <Compile Include="Shared\UnhandledException.vb" />
+    <Compile Include="Utility\CertificationManager.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utility\Compute.vb" />
+    <Compile Include="Utility\HTTPRest.vb" />
+    <Compile Include="Utility\Json.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Query\QueryEntiInfoDAX.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueryEntiInfoDAX.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Query\QueryEntiInfoINFOCERT.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueryEntiInfoINFOCERT.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Query\QueryEntiInfoPARER.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueryEntiInfoPARER.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Query\QueryEntiInfoPARVeneto.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueryEntiInfoPARVeneto.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Query\QueryUnitaDocumentarie.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueryUnitaDocumentarie.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Query\QueryEnti.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueryEnti.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Query\QueryRegistro.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QueryRegistro.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

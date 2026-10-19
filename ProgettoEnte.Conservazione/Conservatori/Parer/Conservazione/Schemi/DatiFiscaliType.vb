@@ -1,0 +1,139 @@
+Option Strict Off
+
+Option Explicit On
+
+Imports System.Xml.Serialization
+Namespace Conservatori.PARER.Conservazione.Schemi
+  
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440"), _
+     System.SerializableAttribute(), _
+     System.Diagnostics.DebuggerStepThroughAttribute(), _
+     System.ComponentModel.DesignerCategoryAttribute("code")> _
+    Partial Public Class DatiFiscaliType
+
+        Private denominazioneField As String
+
+        Private nomeField As String
+
+        Private cognomeField As String
+
+        Private cfField As String
+
+        Private pIVAField As String
+
+        Private dataEmissioneField As Date
+
+        Private numeroProgressivoField As String
+
+        Private registroField As String
+
+        Private periodoFiscaleField As String
+
+        Private dataTermineEmissioneField As Date
+
+        '''<remarks/>
+        Public Property Denominazione() As String
+            Get
+                Return Me.denominazioneField
+            End Get
+            Set(value As String)
+                Me.denominazioneField = value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property Nome() As String
+            Get
+                Return Me.nomeField
+            End Get
+            Set(value As String)
+                Me.nomeField = value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property Cognome() As String
+            Get
+                Return Me.cognomeField
+            End Get
+            Set(value As String)
+                Me.cognomeField = value
+            End Set
+        End Property
+
+        '''<remarks/>
+        <System.Xml.Serialization.XmlElementAttribute(DataType:="token")> _
+        Public Property CF() As String
+            Get
+                Return Me.cfField
+            End Get
+            Set(value As String)
+                Me.cfField = value
+            End Set
+        End Property
+
+        '''<remarks/>
+        <System.Xml.Serialization.XmlElementAttribute(DataType:="token")> _
+        Public Property PIVA() As String
+            Get
+                Return Me.pIVAField
+            End Get
+            Set(value As String)
+                Me.pIVAField = value
+            End Set
+        End Property
+
+        '''<remarks/>
+        <System.Xml.Serialization.XmlElementAttribute(DataType:="date")> _
+        Public Property DataEmissione() As Date
+            Get
+                Return Me.dataEmissioneField
+            End Get
+            Set(value As Date)
+                Me.dataEmissioneField = value
+            End Set
+        End Property
+
+        '''<remarks/>
+        <System.Xml.Serialization.XmlElementAttribute(DataType:="integer")> _
+        Public Property NumeroProgressivo() As String
+            Get
+                Return Me.numeroProgressivoField
+            End Get
+            Set(value As String)
+                Me.numeroProgressivoField = value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property Registro() As String
+            Get
+                Return Me.registroField
+            End Get
+            Set(value As String)
+                Me.registroField = value
+            End Set
+        End Property
+
+        '''<remarks/>
+        Public Property PeriodoFiscale() As String
+            Get
+                Return Me.periodoFiscaleField
+            End Get
+            Set(value As String)
+                Me.periodoFiscaleField = value
+            End Set
+        End Property
+
+        '''<remarks/>
+        <System.Xml.Serialization.XmlElementAttribute(DataType:="date")> _
+        Public Property DataTermineEmissione() As Date
+            Get
+                Return Me.dataTermineEmissioneField
+            End Get
+            Set(value As Date)
+                Me.dataTermineEmissioneField = value
+            End Set
+        End Property
+    End Class
+End Namespace

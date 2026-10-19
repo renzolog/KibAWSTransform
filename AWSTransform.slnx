@@ -1,0 +1,34 @@
+<Solution>
+  <Project Path="http://localhost:54220" Type="Website" DisplayName="ProgettoEnte.Conservazione.Web.ServiceLayer" Id="ffb3cd88-dc16-4be4-9953-d81276fdb5f4">
+    <BuildType Project="Debug" />
+    <Properties Name="WebsiteProperties">
+      <Property Name="Debug.AspNetCompiler.Debug" Value="&quot;True&quot;" />
+      <Property Name="Debug.AspNetCompiler.FixedNames" Value="&quot;false&quot;" />
+      <Property Name="Debug.AspNetCompiler.ForceOverwrite" Value="&quot;true&quot;" />
+      <Property Name="Debug.AspNetCompiler.PhysicalPath" Value="&quot;ProgettoEnte.Conservazione.Web.ServiceLayer\&quot;" />
+      <Property Name="Debug.AspNetCompiler.TargetPath" Value="&quot;PrecompiledWeb\localhost_54220\&quot;" />
+      <Property Name="Debug.AspNetCompiler.Updateable" Value="&quot;true&quot;" />
+      <Property Name="Debug.AspNetCompiler.VirtualPath" Value="&quot;/localhost_54220&quot;" />
+      <Property Name="Release.AspNetCompiler.Debug" Value="&quot;False&quot;" />
+      <Property Name="Release.AspNetCompiler.FixedNames" Value="&quot;false&quot;" />
+      <Property Name="Release.AspNetCompiler.ForceOverwrite" Value="&quot;true&quot;" />
+      <Property Name="Release.AspNetCompiler.PhysicalPath" Value="&quot;ProgettoEnte.Conservazione.Web.ServiceLayer\&quot;" />
+      <Property Name="Release.AspNetCompiler.TargetPath" Value="&quot;PrecompiledWeb\localhost_54220\&quot;" />
+      <Property Name="Release.AspNetCompiler.Updateable" Value="&quot;true&quot;" />
+      <Property Name="Release.AspNetCompiler.VirtualPath" Value="&quot;/localhost_54220&quot;" />
+      <Property Name="SccAuxPath" Value="&quot;SAK&quot;" />
+      <Property Name="SccLocalPath" Value="&quot;SAK&quot;" />
+      <Property Name="SccProjectName" Value="&quot;SAK&quot;" />
+      <Property Name="SccProvider" Value="&quot;SAK&quot;" />
+      <Property Name="SlnRelativePath" Value="&quot;ProgettoEnte.Conservazione.Web.ServiceLayer\&quot;" />
+      <Property Name="TargetFrameworkMoniker" Value="&quot;.NETFramework,Version%3Dv4.8&quot;" />
+      <Property Name="UseIISExpress" Value="&quot;true&quot;" />
+    </Properties>
+  </Project>
+  <Project Path="ProgettoEnte.Conservazione.Database/ProgettoEnte.Conservazione.Database.sqlproj" Id="33d7965b-62b4-40fc-87ff-1bd524cdd476">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="ProgettoEnte.Conservazione/ProgettoEnte.Conservazione.vbproj" Id="0d122226-4c92-4661-8b99-aa3ee6f693e7" />
+  <Project Path="Web/Web.vbproj" Id="6896f37a-1023-4eb5-b0ae-d607358099b6" />
+</Solution>
